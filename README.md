@@ -39,6 +39,18 @@ To get a list of operation commands, send this message in the channel:
 /tasks-man
 ```
 
+To create a new task in channel do:
+```
+TODO: <new task> @assignee /d YYYY-MM-DD HH:MM
+```
+E.g
+
+![Create task example](https://i.ibb.co/rR5XhqBw/Screenshot-from-2025-02-23-22-18-21.png)
+
+
+Result:
+![Create task example](https://i.ibb.co/bMJ5cSdv/Screenshot-from-2025-02-23-22-15-15.png)
+
 Follow the instructions in these two commands to begin using Task Watch.
 
 ## App Usage Locally
