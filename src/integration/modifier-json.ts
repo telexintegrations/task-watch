@@ -18,7 +18,7 @@ export const MODIFIER_JSON = {
                 app_description: "Task Watch is a task management tool for handling tasks creation and assignment, tasks management and reminder, and setting deadlines for tasks in a team on a telex channel.",
                 app_logo: "https://i.ibb.co/ksRwWWL6/DALL-E-2025-02-21-17-38-38-A-modern-and-minimalist-logo-for-TASK-WATCH-The-logo-features-a-notepad-w.webp",
                 app_name: "Task Watch",
-                app_url: "https://hng12-stage3-telex-integration-production.up.railway.app",
+                app_url: "https://task-watch-production.up.railway.app",
                 background_color: "#ffffff"
         },
         integration_category: "Project Management",
