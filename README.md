@@ -1,7 +1,7 @@
 # TASK WATCH
 
 ## Description
-Task Watch is a project management tool implemented as a **[Modifier Integration](https://docs.telex.im/docs/Integrations/creating_integration#modifier-integration-type)** for Telex. It enables teams within Telex channels to create, delegate, manage, and set deadlines for tasks efficiently.
+Task Watch is a project management tool implemented as a **Modifier Integration** for Telex. It enables teams within Telex channels to create, delegate, manage, and set deadlines for tasks efficiently.
 
 ## Features
 - Create and assign tasks using a preset delimiter.
@@ -48,7 +48,7 @@ To use Task Watch locally:
    ```
    git clone git@github.com:telexintegrations/task-watch.git
    ```
-2. `cd` into the newly created directory `task-watch` and run:
+2. `cd` into the newly created directory `task-watch` and run: 
    ```
    npm install
    ```
@@ -67,6 +67,24 @@ To use Task Watch locally:
 
 **NB:** You need to retrieve your channel ID from Telex.
 
+## Hosting the Integration Yourself
+To host the integration yourself:
+
+1. Fork this repo.
+2. Choose an app hosting service of your choice (e.g., Render, Railway, etc.).
+3. Add the following environment variables to your deployment settings:
+   ```
+   TARGET_URL=https://<your-deployment-domain>/format-message
+   TICK_URL=https://<your-deployment-domain>/format-message
+   WEBSITE=https://<your-deployment-domain>
+   ```
+4. In the integration settings, add your hosted app using the `integration.json` file from our hosted application with this URL:
+   ```
+   https://<your-deployment-domain>/integration.json
+   ```
+5. Add the channel ID of the channel where you want to install the integration.
+6. Uncheck all other channels in your organization except the channel whose ID was added in the settings to prevent messages from spamming other channels.
+
 ## Example
 ### 1. Creating a New Task
 ```
@@ -74,7 +92,7 @@ $ ./test_script.sh <CHANNEL_ID> 'TODO: warm eba @hng_mentors /d 2025-02-23 18:00
 
 {
    "event_name":"🎯 New task",
-   "message":"<h1><b>🎯 New Task</b></h1> \n<b>Task ID:</b> #4\n<b>📋Task:</b>  warm eba \n<b>👨🏻‍💻 Assigned to:</b> @hng_mentors\n<b>📅 Due By:</b> Sunday, February 2025, 19:00\n",
+   "message":"<h1><b>🎯 New Task</b></h1> \n<b>Task ID:</b> #4\n<b>📋Task:</b>  warm eba \n<b>👨🏻‍💻 Assigned to:</b> @hng_mentors\n<b>📅 Due By:</b> Sunday, February 23, 2025, 19:00\n",
    "status":"success",
    "username":"Task Bot"
 }
@@ -100,3 +118,15 @@ The message sent to the channel will look something like this:
 
 ![Channel message example](https://i.ibb.co/jv2XJt6F/Screenshot-from-2025-02-23-18-00-31.png)
 
+## Contributing
+We welcome contributions! To get started:
+
+1. **Fork the repository** and create your own branch.
+2. **Make your changes** and ensure they follow the project's guidelines.
+3. **Commit your changes** with a clear and concise commit message.
+4. **Push your changes** to your forked repository.
+5. **Open a pull request** with a detailed explanation of the changes you've made.
+
+## Resources
+1. **[TELEX](https://telex.im/)**
+2. **[TELEX DOCUMENTATION](https://docs.telex.im/docs/intro)**
