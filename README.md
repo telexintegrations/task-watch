@@ -49,6 +49,7 @@ E.g
 
 
 Result:
+
 ![Create task example](https://i.ibb.co/bMJ5cSdv/Screenshot-from-2025-02-23-22-15-15.png)
 
 Follow the instructions in these two commands to begin using Task Watch.
