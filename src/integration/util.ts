@@ -46,10 +46,11 @@ export function getTimeString(time: Date | null) {
 
 
 export function formatDateTime(date: Date): string {
-    const weekday = date.toLocaleString('en-US', { weekday: 'long' }); // Wednesday
-    const month = date.toLocaleString('en-US', { month: 'long' }); // January
-    const year = date.getFullYear(); // 2024
-    const time = date.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: false }); // 13:00
+    const weekday = date.toLocaleString('en-US', { weekday: 'long' }); 
+    const month = date.toLocaleString('en-US', { month: 'long' }); 
+    const day = date.getDate();
+    const year = date.getFullYear();
+    const time = date.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', hour12: false }); 
 
-    return `${weekday}, ${month} ${year}, ${time}`;
+    return `${weekday}, ${month} ${day}, ${year} by ${time}`;
 }

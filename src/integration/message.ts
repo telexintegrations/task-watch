@@ -47,7 +47,7 @@ export class Message {
         const date = match ? match[1] : null;
         
         const timeMatch = dateField.match(/\d{2}:\d{2}$/);
-        
+    
         const time = timeMatch && date? new Date(`${date}T${timeMatch[0]}:00Z`) : null
         
         return {date, time}
@@ -79,8 +79,8 @@ export class Message {
         const id = `Task ID: ${task.task_ID}\n`;
         const description =  `◽Task: ${task.task_description}\n`;
         const assignedTo = `👨🏻‍💻 Assigned to: ${task.assigned_to}\n`;
-        let dueBy = !task.getTimeRemaining() ? 
-                        `📅 Due By: ${task.due_by} (${task.getTimeRemaining()}) \n` :
+        let dueBy = task.getTimeRemaining() ? 
+                        `📅 Due By: ${formatDateTime(task.dateTime)} (${task.getTimeRemaining()}) \n` :
                         `📅 Due By: ${formatDateTime(task.dateTime)} \n`;
         
         return  id + description + assignedTo + dueBy + "\n";

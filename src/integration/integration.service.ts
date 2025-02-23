@@ -219,7 +219,7 @@ export class IntegrationService {
             newTask.createdAt = new Date();
             newTask.task_description = messageHelper.getTaskFromMessage();
             newTask.channel_id = channel_id;
- 
+            
             await db.save(newTask.task_ID, newTask);
             this.scheduleTaskDueReminder(newTask)
             return newTask;
